@@ -1,0 +1,44 @@
+package ca.mcgill.ecse321.eventregistration.model;
+import java.util.*;
+import java.sql.Date;
+import java.sql.Time;
+import javax.persistence.Id;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Event{
+	private String name;
+
+	public void setName(String name){
+		this.name = name;
+	}
+	@Id
+	public String getName() {
+		return this.name;
+	}
+
+	private Date eventDate;
+	public void setEventDate(Date eventDate){
+		this.eventDate = eventDate;
+	}
+	public Date getEventDate() {
+		return this.eventDate;
+	}
+
+	public Time startTime;
+	public void setStartTime(Time startTime){
+		this.startTime = startTime;
+	}
+	public Time getStartTime() {
+		return this.startTime;
+	}
+	public Time endTime;
+	public void setEndTime(Time endTime){
+		this.endTime = endTime;
+	}
+	public Time getEndTime() {
+		return this.endTime;
+	}
+}
